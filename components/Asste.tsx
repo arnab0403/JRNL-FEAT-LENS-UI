@@ -31,12 +31,12 @@ const chartConfig = {
 
 export function AssetPerformanceDistribution() {
   return (
-    <Card className="h-full w-[33%] rounded-2xl border-zinc-800 bg-gradient-to-t from-[#14151C] to-[#0F0F0F] text-white">
+    <Card className="max-h-full min-h-full w-[33%]  rounded-[43px] border-zinc-800 bg-gradient-to-t from-[#14151C] to-[#0F0F0F] text-white px-3">
       
       {/* Header */}
       <CardHeader className="flex items-start justify-between px-5 pt-5 pb-2">
         <div>
-          <CardTitle className="text-base font-medium">
+          <CardTitle className="text-base font-normal">
             Asset Performance Distribution
           </CardTitle>
           <CardDescription className="text-xs text-zinc-400">
@@ -52,7 +52,7 @@ export function AssetPerformanceDistribution() {
           <BarChart
             data={chartData}
             layout="vertical"
-            margin={{ top: 0, right: 10, left: 10, bottom: 0 }}
+            margin={{ top: 0, right: 10, left: -5, bottom: 0 }}
             barCategoryGap={18}
           >
             <CartesianGrid

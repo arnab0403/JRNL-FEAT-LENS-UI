@@ -54,8 +54,8 @@ const chartConfig = {
 
 export function HourlyTradeDistribution() {
   return (
-      <Card className="w-[50%] max-w-3xl border-none bg-zinc-95 border-zinc-800 bg-gradient-to-t from-[#14151C] to-[#0F0F0F] text-white shadow-none">
-        <CardHeader className="flex flex-row items-center justify-between pb-8">
+      <Card className="w-[50%] rounded-[43px] border border-jrnl-dash bg-gradient-to-t from-[#14151C] to-[#0F0F0F] text-white shadow-none px-3">
+        <CardHeader className="flex flex-row items-center justify-between pb-8 pt-4">
           <div className="space-y-1">
             <CardTitle className="text-xl font-normal text-white">
               Hourly Trade Distribution
@@ -69,13 +69,13 @@ export function HourlyTradeDistribution() {
           </button>
         </CardHeader>
         <CardContent>
-          <ChartContainer config={chartConfig} className="h-[350px] w-full">
+          <ChartContainer config={chartConfig} className="h-[300px] w-full">
             <BarChart
               data={chartData}
               margin={{
                 top: 5,
                 right: 0,
-                left: -20,
+                left: -40,
                 bottom: 0,
               }}
             >

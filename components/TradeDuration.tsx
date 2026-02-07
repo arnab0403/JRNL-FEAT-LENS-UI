@@ -23,7 +23,7 @@ const tradeData = [
 
 export function TradeDurationChart() {
   return (
-    <div className="w-[50%] rounded-2xl border border-zinc-800 bg-gradient-to-t from-[#14151C] to-[#0F0F0F] p-4">
+    <div className="w-[50%] rounded-2xl border border-jrnl-dash bg-gradient-to-t from-[#14151C] to-[#0F0F0F] p-4">
       
       {/* Header */}
       <div className="mb-3 flex items-start justify-between">

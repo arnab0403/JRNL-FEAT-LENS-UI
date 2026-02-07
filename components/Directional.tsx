@@ -38,11 +38,11 @@ const chartConfig = {
 
 export default function Directional() {
   return (
-    <Card className="h-full w-[33%] rounded-2xl border-zinc-800 bg-gradient-to-t from-[#14151C] to-[#0F0F0F] text-white">
+    <Card className="max-h-full min-h-full w-[33%] rounded-[43px] border-zinc-800 bg-gradient-to-t from-[#14151C] to-[#0F0F0F] text-white px-3">
       
       {/* Header */}
       <CardHeader className="flex items-center justify-between px-5 pt-5 pb-3">
-        <CardTitle className="text-base font-medium">
+        <CardTitle className="text-base font-normal">
           Directional Performance
         </CardTitle>
         <MoreVertical className="h-4 w-4 text-zinc-400" />
@@ -54,7 +54,7 @@ export default function Directional() {
           <BarChart
             data={chartData}
             barGap={6}
-            margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
+            margin={{ top: 10, right: 0, left:-30, bottom: 0 }}
           >
             <CartesianGrid
               vertical={false}
@@ -90,14 +90,14 @@ export default function Directional() {
             {/* Profit */}
             <Bar
               dataKey="profit"
-              radius={[6, 6, 0, 0]}
+              radius={[0, 0, 0, 0]}
               fill="url(#greenGradient)"
             />
 
             {/* Loss */}
             <Bar
               dataKey="loss"
-              radius={[6, 6, 0, 0]}
+              radius={[0, 0, 0, 0]}
               fill="url(#redGradient)"
             />
 

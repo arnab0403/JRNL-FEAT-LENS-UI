@@ -9,6 +9,7 @@ import {
   XAxis,
   YAxis,
   ReferenceLine,
+  ResponsiveContainer,
 } from "recharts"
 
 import {
@@ -43,14 +44,14 @@ const chartConfig = {
 
 export function DailyPnLChart() {
   return (
-    <Card className="w-[50%] rounded-2xl border-zinc-800  bg-gradient-to-t from-[#14151C] to-[#0F0F0F] text-white py-10">
+    <Card className="w-[50%] rounded-[43px] border border-jrnl-dash bg-gradient-to-t from-[#14151C] to-[#0F0F0F] text-white py-10 px-4">
       {/* Header */}
-      <CardHeader className="flex-row items-start justify-between space-y-0 pb-2">
-        <div>
-          <CardTitle className="text-xl font-medium">
+      <CardHeader className="flex items-center justify-between">
+        <div className="">
+          <CardTitle className="text-xl font-normal text-white">
             Daily Profit/Loss
           </CardTitle>
-          <CardDescription className="text-xs text-zinc-400">
+          <CardDescription className="text-zinc-500">
             Last 7 day performance
           </CardDescription>
         </div>
@@ -58,9 +59,9 @@ export function DailyPnLChart() {
       </CardHeader>
 
       {/* Chart */}
-      <CardContent className="pt-4">
-        <ChartContainer config={chartConfig}>
-          <BarChart data={chartData} margin={{ top: 10, left: 0, right: 0 }}>
+      <CardContent className="mt-2">
+        <ChartContainer config={chartConfig} className="h-[300px] w-full">
+          <BarChart data={chartData} margin={{ top: 10, left: -30, right: 0 }}>
             <CartesianGrid
               strokeDasharray="3 3"
               stroke="#27272a"
@@ -80,7 +81,7 @@ export function DailyPnLChart() {
               tickLine={false}
               axisLine={false}
               fontSize={12}
-              domain={[-400, 600]}
+              domain={[-400, 400]}
             />
 
             {/* Zero Line */}
@@ -99,7 +100,7 @@ export function DailyPnLChart() {
               }
             />
 
-            <Bar dataKey="pnl" radius={[6, 6, 6, 6]}>
+            <Bar dataKey="pnl" radius={[0, 0, 0, 0]}>
               {chartData.map((item) => (
                 <Cell
                   key={item.day}

@@ -19,28 +19,30 @@ const data = [
 
 export default function BestAssetChart() {
   return (
-    <div className="w-1/2 rounded-2xl border border-zinc-800 bg-gradient-to-t from-[#14151C] to-[#0F0F0F] p-10">
+    <div className="w-[50%] rounded-[43px] border border-jrnl-dash bg-gradient-to-t from-[#14151C] to-[#0F0F0F] p-10">
       
       {/* Header */}
       <div className="mb-4 flex items-center justify-between">
-        <h3 className="text-xl font-medium text-zinc-200">
+        <h3 className="text-xl font-normal text-zinc-200">
           Best Asset for Trading
         </h3>
         <MoreVertical className="h-4 w-4 text-zinc-400" />
       </div>
 
       {/* Chart */}
-      <div className="h-[350px]">
+      <div className="h-[300px]">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
             barGap={8}
-            margin={{ top: 10, right: 10, left: -10, bottom: 0 }}
+            margin={{ top: 20, right: 10, left: -40, bottom: 0 }}
           >
             <CartesianGrid
-              strokeDasharray="3 3"
+              x={data[0].profit}
+              y={data[0].loss}
               stroke="#27272a"
               vertical={false}
+              horizontal={true}
             />
 
             <XAxis

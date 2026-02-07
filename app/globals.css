@@ -6,7 +6,7 @@
 
 :root {
 
-    /* Custom colors */
+  /* Custom colors */
   --jrnl-primary-sidebar: #0f1012;
   --jrnl-primary: #0a0a0a;
   --jrnl-secondary: oklch(0.97 0 0);
@@ -66,7 +66,7 @@
   --color-jrnl-text-white: var(--jrnl-text-white);
   --color-jrnl-text-grey: var(--jrnl-text-grey);
   --color-jrnl-text-icon: var(--jrnl-text-icon);
-  --color-jrnl-table-dash: var(--jrnl-table-dash);
+  --color-jrnl-dash: var(--jrnl-table-dash);
 
   /* Custom Tailwind color utilities */
   --color-primary: var(--primary);

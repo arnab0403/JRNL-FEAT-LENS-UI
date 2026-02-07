@@ -19,10 +19,10 @@ const data = [
 
 export function AssetPerformanceDonut() {
   return (
-    <Card className="w-[33%] mx-auto aspect-square flex flex-col justify-between overflow-hidden rounded-[2rem]  border-zinc-800 bg-gradient-to-t from-[#14151C] to-[#0F0F0F]">
+    <Card className="w-[33%] h-[400px] mx-auto aspect-square flex flex-col justify-between overflow-hidden rounded-[43px]  border-zinc-800 bg-gradient-to-t from-[#14151C] to-[#0F0F0F] px-3 py-10">
       <CardHeader className="flex flex-row items-start justify-between space-y-0 pb-2">
         <div>
-          <CardTitle className="text-xl font-medium text-white/90">
+          <CardTitle className="text-xl font-normal text-white/90">
             Asset Performance Distribution
           </CardTitle>
           <CardDescription className="text-sm text-white/40">
@@ -33,8 +33,8 @@ export function AssetPerformanceDonut() {
           <MoreVertical className="h-5 w-5" />
         </button>
       </CardHeader>
-      <CardContent className="flex-1 relative flex items-center justify-center p-0 m-0">
-        <div className="w-full h-[280px]">
+      <CardContent className="flex-1 relative flex items-center justify-center p-0 m-0 max-h-full">
+        <div className="w-full max-h-full">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie
@@ -43,43 +43,41 @@ export function AssetPerformanceDonut() {
                 nameKey="name"
                 cx="50%"
                 cy="50%"
-                innerRadius={50}
-                outerRadius={80}
+                innerRadius={40}
+                outerRadius={60}
                 stroke="none"
                 activeIndex={0}
                 label={({ cx, cy, midAngle, outerRadius, name }) => {
-                  const RADIAN = Math.PI / 180;
-                  const radius = outerRadius + 25;
-                  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-                  const y = cy + radius * Math.sin(-midAngle * RADIAN);
-                  
+                  const RADIAN = Math.PI / 180
+                  const radius = outerRadius + 25
+                  const x = cx + radius * Math.cos(-midAngle * RADIAN)
+                  const y = cy + radius * Math.sin(-midAngle * RADIAN)
+
                   return (
                     <text
                       x={x}
                       y={y}
-                      fill="rgba(255, 255, 255, 0.6)"
-                      textAnchor={x > cx ? 'start' : 'end'}
+                      fill="rgba(255,255,255,0.6)"
+                      textAnchor={x > cx ? "start" : "end"}
                       dominantBaseline="central"
                       fontSize={10}
                     >
                       {name}
                     </text>
-                  );
+                  )
                 }}
                 labelLine={{
-                  stroke: 'rgba(255, 255, 255, 0.2)',
-                  strokeWidth: 1
+                  stroke: "rgba(255,255,255,0.2)",
+                  strokeWidth: 1,
                 }}
-                activeShape={({
-                  outerRadius = 0,
-                  ...props
-                }: PieSectorDataItem) => (
+                activeShape={({ outerRadius = 0, ...props }: PieSectorDataItem) => (
                   <Sector {...props} outerRadius={outerRadius + 10} />
                 )}
               >
                 {data.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.color} />
+                  <Cell key={index} fill={entry.color} />
                 ))}
+
                 <Label
                   content={({ viewBox }) => {
                     if (viewBox && "cx" in viewBox && "cy" in viewBox) {
@@ -93,7 +91,7 @@ export function AssetPerformanceDonut() {
                           <tspan
                             x={viewBox.cx}
                             y={viewBox.cy}
-                            className="fill-white text-4xl font-semibold"
+                            className="fill-white text-2xl font-semibold"
                           >
                             28
                           </tspan>
@@ -113,8 +111,6 @@ export function AssetPerformanceDonut() {
             </PieChart>
           </ResponsiveContainer>
         </div>
-
-
       </CardContent>
     </Card>
   )

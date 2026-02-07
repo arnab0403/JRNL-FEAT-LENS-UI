@@ -28,10 +28,10 @@ const chartData = [
 
 export function Holiday() {
   return (
-    <Card className="w-[50%] rounded-2xl border border-zinc-800 bg-gradient-to-t from-[#14151C] to-[#0F0F0F]">
+    <Card className="w-[50%] rounded-2xl border border-jrnl-dash bg-gradient-to-t from-[#14151C] to-[#0F0F0F]">
       
       {/* Header */}
-      <CardHeader className="flex-row items-center justify-between pb-2">
+      <CardHeader className="flex items-center justify-between pb-2">
         <CardTitle className="text-sm font-medium text-zinc-200">
           Average Holiday Period
         </CardTitle>
@@ -67,7 +67,7 @@ export function Holiday() {
 
               <Bar
                 dataKey="value"
-                radius={[8, 8, 0, 0]}
+                radius={[0, 0, 0, 0]}
                 fill="url(#greenGradient)"
                 barSize={32}
               />
