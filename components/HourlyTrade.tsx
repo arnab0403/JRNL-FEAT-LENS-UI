@@ -122,7 +122,7 @@ export function HourlyTradeDistribution() {
               <Bar
                 dataKey="activity"
                 fill="url(#barGradient)"
-                radius={[2, 2, 0, 0]}
+                radius={[0, 0, 0, 0]}
                 barSize={12}
               />
             </BarChart>
