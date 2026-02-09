@@ -19,7 +19,7 @@ const data = [
 
 export default function BestAssetChart() {
   return (
-    <div className="w-[50%] rounded-[43px] border border-jrnl-dash bg-gradient-to-t from-[#14151C] to-[#0F0F0F] p-10">
+    <div className="w-[50%] rounded-[43px] border border-jrnl-dash bg-gradient-to-t from-[#14151C] to-[#0F0F0F] px-10 pt-10">
       
       {/* Header */}
       <div className="mb-4 flex items-center justify-between">
@@ -30,7 +30,7 @@ export default function BestAssetChart() {
       </div>
 
       {/* Chart */}
-      <div className="h-[300px]">
+      <div className="h-[300px] mt-9">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
