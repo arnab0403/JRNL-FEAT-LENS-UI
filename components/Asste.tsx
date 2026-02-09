@@ -34,16 +34,19 @@ export function AssetPerformanceDistribution() {
     <Card className="max-h-full min-h-full w-[33%]  rounded-[43px] border-zinc-800 bg-gradient-to-t from-[#14151C] to-[#0F0F0F] text-white px-3">
       
       {/* Header */}
-      <CardHeader className="flex items-start justify-between px-5 pt-5 pb-2">
-        <div>
-          <CardTitle className="text-base font-normal">
-            Asset Performance Distribution
-          </CardTitle>
-          <CardDescription className="text-xs text-zinc-400">
-            Profit by Trading distribution
-          </CardDescription>
+      <CardHeader className="flex justify-between items-center px-5 h-[80px]">
+        <div className="flex w-full justify-between  ">
+          <div className="">
+            <CardTitle className="text-xl font-normal">
+              Asset Performance Distribution
+            </CardTitle>
+            <CardDescription className="text-xs text-jrnl-text-grey">
+              Profit by Trading distribution
+            </CardDescription>
+          </div>
+
+          <MoreVertical className="h-6 w-6 text-jrnl-text-white self-start" />
         </div>
-        <MoreVertical className="h-4 w-4 text-zinc-400" />
       </CardHeader>
 
       {/* Chart */}
@@ -90,7 +93,7 @@ export function AssetPerformanceDistribution() {
 
             <Bar
               dataKey="profit"
-              radius={[0, 8, 8, 0]}
+              radius={[0, 0, 0, 0]}
               fill="url(#greenGradient)"
               barSize={22}
             />

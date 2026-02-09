@@ -42,10 +42,10 @@ export default function Directional() {
       
       {/* Header */}
       <CardHeader className="flex items-center justify-between px-5 pt-5 pb-3">
-        <CardTitle className="text-base font-normal">
+        <CardTitle className="text-xl font-normal">
           Directional Performance
         </CardTitle>
-        <MoreVertical className="h-4 w-4 text-zinc-400" />
+        <MoreVertical className="h-6 w-6 text-jrnl-text-white self-start" />
       </CardHeader>
 
       {/* Chart */}

@@ -26,7 +26,7 @@ export default function BestAssetChart() {
         <h3 className="text-xl font-normal text-zinc-200">
           Best Asset for Trading
         </h3>
-        <MoreVertical className="h-4 w-4 text-zinc-400" />
+        <MoreVertical className="h-6 w-6 text-jrnl-text-white" />
       </div>
 
       {/* Chart */}

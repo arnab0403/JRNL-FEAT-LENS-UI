@@ -1,3 +1,4 @@
+import { MoreVertical } from "lucide-react"
 import {
   ScatterChart,
   Scatter,
@@ -23,29 +24,25 @@ const tradeData = [
 
 export function TradeDurationChart() {
   return (
-    <div className="w-[50%] rounded-2xl border border-jrnl-dash bg-gradient-to-t from-[#14151C] to-[#0F0F0F] p-4">
+    <div className="w-[50%] rounded-[43px] border border-jrnl-dash bg-gradient-to-t from-[#14151C] to-[#0F0F0F] p-6">
       
       {/* Header */}
-      <div className="mb-3 flex items-start justify-between">
-        <div>
-          <h3 className="text-sm font-medium text-zinc-200">
+      <div className="flex items-center justify-between p-3 h-[73px]">
+          <h3 className="text-[20px] font-normal text-text-white">
             Trade Duration
           </h3>
-          <p className="text-xs text-zinc-500">
-            Profit & loss vs time held
-          </p>
-        </div>
-        <span className="text-zinc-500">⋮</span>
+        <span className="text-text-white">
+          <MoreVertical className="h-6 w-6" />
+        </span>
       </div>
 
       {/* Chart */}
-      <div className="h-[80%]">
+      <div className="h-[80%] w-full pr-3">
         <ResponsiveContainer width="100%" height="100%">
-          <ScatterChart margin={{ top: 10, right: 10, left: -5, bottom: 0 }}>
+          <ScatterChart margin={{ top: 0, right: 10, left: 0, bottom: 0 }}>
             
             <CartesianGrid
               stroke="#27272a"
-              strokeDasharray="3 3"
             />
 
             <XAxis
@@ -53,6 +50,7 @@ export function TradeDurationChart() {
               dataKey="duration"
               unit="h"
               stroke="#71717a"
+              tickCount={8}
               tickLine={false}
               axisLine={false}
               fontSize={11}
@@ -64,9 +62,10 @@ export function TradeDurationChart() {
               stroke="#71717a"
               tickLine={false}
               axisLine={false}
-              domain={[-100, 150]}
+              tickCount={6}
+              domain={[-150, 150]}
               fontSize={11}
-              tickFormatter={(v) => `₹${v}`}
+              tickFormatter={(v) => `$${v}.00`}
             />
 
             {/* Solid zero line */}

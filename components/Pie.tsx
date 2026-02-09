@@ -25,16 +25,16 @@ export function AssetPerformanceDonut() {
           <CardTitle className="text-xl font-normal text-white/90">
             Asset Performance Distribution
           </CardTitle>
-          <CardDescription className="text-sm text-white/40">
+          <CardDescription className="text-sm text-jrnl-text-grey">
             Profit by Trading distribution
           </CardDescription>
         </div>
         <button className="text-white/60 hover:text-white transition-colors">
-          <MoreVertical className="h-5 w-5" />
+          <MoreVertical className="h-6 w-6 text-jrnl-text-white" />
         </button>
       </CardHeader>
       <CardContent className="flex-1 relative flex items-center justify-center p-0 m-0 max-h-full">
-        <div className="w-full max-h-full">
+        <div className="w-full h-[220px] max-h-full">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie

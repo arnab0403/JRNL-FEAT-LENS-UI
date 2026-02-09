@@ -26,7 +26,7 @@ export default function TradingPerformence() {
         <h3 className="text-xl font-normal text-zinc-200">
           Trading Performence
         </h3>
-        <MoreVertical className="h-4 w-4 text-zinc-400" />
+        <MoreVertical className="h-6 w-6 text-jrnl-text-white self-start" />
       </div>
 
       {/* Chart */}
@@ -101,7 +101,7 @@ export default function TradingPerformence() {
       </div>
 
       {/* Footer */}
-      <div className="mt-4 text-[15px] text-zinc-400">
+      <div className="mt-4 text-[15px] text-jrnl-text-grey">
         Best Day: TUE
       </div>
     </div>

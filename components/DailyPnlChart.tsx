@@ -51,11 +51,11 @@ export function DailyPnLChart() {
           <CardTitle className="text-xl font-normal text-white">
             Daily Profit/Loss
           </CardTitle>
-          <CardDescription className="text-zinc-500">
+          <CardDescription className="text-jrnl-text-grey">
             Last 7 day performance
           </CardDescription>
         </div>
-        <MoreVertical className="h-4 w-4 text-zinc-400" />
+        <MoreVertical className="h-6 w-6 text-jrnl-text-white self-start" />
       </CardHeader>
 
       {/* Chart */}

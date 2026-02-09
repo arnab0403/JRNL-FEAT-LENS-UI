@@ -55,17 +55,17 @@ const chartConfig = {
 export function HourlyTradeDistribution() {
   return (
       <Card className="w-[50%] rounded-[43px] border border-jrnl-dash bg-gradient-to-t from-[#14151C] to-[#0F0F0F] text-white shadow-none px-3">
-        <CardHeader className="flex flex-row items-center justify-between pb-8 pt-4">
+        <CardHeader className="flex flex-row items-center justify-between pb-8 pt-4 ">
           <div className="space-y-1">
-            <CardTitle className="text-xl font-normal text-white">
+            <CardTitle className="text-[20px] font-normal text-white">
               Hourly Trade Distribution
             </CardTitle>
-            <CardDescription className="text-zinc-500">
+            <CardDescription className="text-jrnl-text-grey">
               Trading Activity by hour
             </CardDescription>
           </div>
-          <button className="text-zinc-400 hover:text-white">
-            <MoreVertical className="h-5 w-5" />
+          <button className="text-jrnl-text-white self-start">
+            <MoreVertical className="h-6 w-6" />
           </button>
         </CardHeader>
         <CardContent>

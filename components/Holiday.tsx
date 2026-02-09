@@ -28,30 +28,33 @@ const chartData = [
 
 export function Holiday() {
   return (
-    <Card className="w-[50%] rounded-2xl border border-jrnl-dash bg-gradient-to-t from-[#14151C] to-[#0F0F0F]">
+    <Card className="w-[50%] rounded-[43px] border border-jrnl-dash bg-gradient-to-t from-[#14151C] to-[#0F0F0F] p-6">
       
       {/* Header */}
-      <CardHeader className="flex items-center justify-between pb-2">
-        <CardTitle className="text-sm font-medium text-zinc-200">
+      <CardHeader className="flex items-center justify-between p-3 h-[73px]">
+        <CardTitle className="text-[20px] font-normal text-jrnl-text-white">
           Average Holiday Period
         </CardTitle>
-        <MoreVertical className="h-4 w-4 text-zinc-500" />
+        <MoreVertical className="h-6 w-6 text-jrnl-text-white" />
       </CardHeader>
 
       {/* Chart */}
-      <CardContent className="pt-2">
-        <div className="h-[220px]">
+      <CardContent className="h-[240px] w-full p-0">
+        <div className="h-full w-full">
           <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={chartData} margin={{ top: 10 }}>
+            <BarChart data={chartData} 
+            margin={{left:-25, right:25, top:0, bottom:0}} barCategoryGap={0}
+            barGap={0}
+            >
               
               <CartesianGrid
                 stroke="#27272a"
-                strokeDasharray="3 3"
               />
 
               <XAxis
                 dataKey="range"
                 stroke="#71717a"
+                domain={[0, 50]} 
                 tickLine={false}
                 axisLine={false}
                 fontSize={11}
@@ -69,6 +72,7 @@ export function Holiday() {
                 dataKey="value"
                 radius={[0, 0, 0, 0]}
                 fill="url(#greenGradient)"
+                
                 barSize={32}
               />
 

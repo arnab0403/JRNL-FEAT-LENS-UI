@@ -34,14 +34,16 @@ export default function Home() {
 
           </div>
           {/* feature options */}
-          <div className="flex gap-6" >
-            <button className={`${tab === "reports" ? "bg-jrnl-bold" : "text-jrnl-text-grey"} text-[20px] px-2 max-h-[40px] rounded-[10px] cursor-pointer flex justify-center items-center`} onClick={()=>setTab("reports")}>
-              Reports
+          <div className="flex gap-6 text-jrnl-text-white" >
+            <button className={`${tab === "reports" ? "bg-jrnl-bold" : "text-jrnl-text-grey"} m-0 p-0  px-3 h-[40px] rounded-[10px] cursor-pointer text-center`} onClick={()=>setTab("reports")}>
+              <p className="leading-[120%] text-[20px] h-[24px]">
+                Reports
+              </p>
             </button>
-            <button className={`${tab === "analytics" ? "bg-jrnl-bold" : "text-jrnl-text-grey"} max-h-10  text-[20px] px-2 py-2.5 rounded-[10px] cursor-pointer flex justify-center items-center`} onClick={()=>setTab("analytics")}>
+            <button className={`${tab === "analytics" ? "bg-jrnl-bold" : "text-jrnl-text-grey"} max-h-10  text-[20px] px-3 py-2.5 rounded-[10px] cursor-pointer flex justify-center items-center`} onClick={()=>setTab("analytics")}>
               Analytics
             </button>
-            <button className={`${tab === "review" ? "bg-jrnl-bold" : "text-jrnl-text-grey"} max-h-10 text-[20px] px-2 py-2.5 rounded-[10px] cursor-pointer flex justify-center items-center`} onClick={()=>setTab("review")}>
+            <button className={`${tab === "review" ? "bg-jrnl-bold" : "text-jrnl-text-grey"} max-h-10 text-[20px] px-3 py-2.5 rounded-[10px] cursor-pointer flex justify-center items-center`} onClick={()=>setTab("review")}>
               Review
             </button>
           </div>
