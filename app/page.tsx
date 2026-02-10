@@ -7,6 +7,7 @@ import { useState } from "react";
 import { lensMetricsData } from "@/data/data";
 import Reports from "@/components/Reports";
 import Analytics from "@/components/Analytics";
+import { ChartBarInteractive } from "@/components/Test";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,6 +51,7 @@ export default function Home() {
         </div>
         {tab === "reports" && <Reports setIsOpen={setIsOpen} lensMetricsData={matricsData}  />}
         {tab === "analytics" && <Analytics setIsOpen={setIsOpen} />}
+        {tab === "review" && <ChartBarInteractive />}
       </div>
     </div>
     {isOpen && <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} matricsData={matricsData} setMatricsData={setMatricsData}/>}

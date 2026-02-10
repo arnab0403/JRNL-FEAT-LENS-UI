@@ -10,6 +10,7 @@ import {
   YAxis,
   ReferenceLine,
   ResponsiveContainer,
+  Tooltip,
 } from "recharts"
 
 import {
@@ -39,6 +40,7 @@ const chartData = [
 const chartConfig = {
   pnl: {
     label: "PnL",
+    color:'transparent'
   },
 } satisfies ChartConfig
 
@@ -61,6 +63,9 @@ export function DailyPnLChart() {
       {/* Chart */}
       <CardContent className="mt-2">
         <ChartContainer config={chartConfig} className="h-[300px] w-full">
+          <ResponsiveContainer width="100%" height="100%">
+
+
           <BarChart data={chartData} margin={{ top: 10, left: -30, right: 0 }}>
             <CartesianGrid
               strokeDasharray="3 3"
@@ -92,13 +97,15 @@ export function DailyPnLChart() {
             />
 
             <ChartTooltip
-              cursor={{ fill: "rgba(255,255,255,0.03)" }}
+              cursor={{ fill: "rgba(255,255,255,0.03)", fillOpacity: 0.05 }}
               content={
                 <ChartTooltipContent
+                  className="bg-zinc-950 border border-zinc-800 rounded-lg text-[12px] p-3"
                   formatter={(value) => [`₹ ${value}`, "PnL"]}
                 />
               }
             />
+
 
             <Bar dataKey="pnl" radius={[0, 0, 0, 0]}>
               {chartData.map((item) => (
@@ -126,6 +133,7 @@ export function DailyPnLChart() {
               </linearGradient>
             </defs>
           </BarChart>
+          </ResponsiveContainer>
         </ChartContainer>
       </CardContent>
     </Card>

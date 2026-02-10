@@ -8,6 +8,7 @@ import {
   XAxis,
   YAxis,
   ResponsiveContainer,
+  Tooltip,
 } from "recharts"
 
 import {
@@ -16,6 +17,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { ChartTooltip } from "./ui/chart"
 
 const chartData = [
   { range: "0s", value: 12 },
@@ -26,14 +28,14 @@ const chartData = [
   { range: "1h", value: 7 },
 ]
 
-export function Holiday() {
+export function Holding() {
   return (
     <Card className="w-[50%] rounded-[43px] border border-jrnl-dash bg-gradient-to-t from-[#14151C] to-[#0F0F0F] p-6">
       
       {/* Header */}
       <CardHeader className="flex items-center justify-between p-3 h-[73px]">
         <CardTitle className="text-[20px] font-normal text-jrnl-text-white">
-          Average Holiday Period
+          Average Holding Period
         </CardTitle>
         <MoreVertical className="h-6 w-6 text-jrnl-text-white" />
       </CardHeader>
@@ -67,6 +69,17 @@ export function Holiday() {
                 fontSize={11}
                 domain={[0, 50]}
               />
+              <Tooltip
+                cursor={{ fill: "rgba(255,255,255,0.03)"}}
+                contentStyle={{
+                  backgroundColor: "#09090b",
+                  border: "1px solid #27272a",
+                  borderRadius: "8px",
+                  fontSize: "12px",
+                  color:"white"
+                }}
+              />
+
 
               <Bar
                 dataKey="value"

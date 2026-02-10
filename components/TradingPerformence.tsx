@@ -24,7 +24,7 @@ export default function TradingPerformence() {
       {/* Header */}
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-xl font-normal text-zinc-200">
-          Trading Performence
+          Daily Trading Performence
         </h3>
         <MoreVertical className="h-6 w-6 text-jrnl-text-white self-start" />
       </div>

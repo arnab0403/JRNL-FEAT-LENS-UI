@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { PieSectorDataItem } from "recharts/types/polar/Pie"
+import { ChartTooltip, ChartTooltipContent } from "./ui/chart"
 
 const data = [
   { name: "BTCUSD: $1", value: 35, color: "#82C1F9" },
@@ -33,10 +34,10 @@ export function AssetPerformanceDonut() {
           <MoreVertical className="h-6 w-6 text-jrnl-text-white" />
         </button>
       </CardHeader>
-      <CardContent className="flex-1 relative flex items-center justify-center p-0 m-0 max-h-full">
+      <CardContent className="flex-1 relative flex items-center justify-center p-0 m-0 max-h-full ">
         <div className="w-full h-[220px] max-h-full">
           <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
+            <PieChart className="focus:border-none">
               <Pie
                 data={data}
                 dataKey="value"
@@ -61,7 +62,7 @@ export function AssetPerformanceDonut() {
                       textAnchor={x > cx ? "start" : "end"}
                       dominantBaseline="central"
                       fontSize={10}
-                    >
+                      >
                       {name}
                     </text>
                   )
@@ -75,7 +76,7 @@ export function AssetPerformanceDonut() {
                 )}
               >
                 {data.map((entry, index) => (
-                  <Cell key={index} fill={entry.color} />
+                  <Cell key={index} fill={entry.color} className="focus:border-none outline-none"/>
                 ))}
 
                 <Label

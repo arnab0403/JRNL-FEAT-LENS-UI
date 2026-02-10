@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts"
+import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts"
 import { MoreVertical } from "lucide-react"
 
 import {
@@ -69,7 +69,9 @@ export function HourlyTradeDistribution() {
           </button>
         </CardHeader>
         <CardContent>
-          <ChartContainer config={chartConfig} className="h-[300px] w-full">
+          <div className="h-[300px] w-full">
+            <ResponsiveContainer width="100%" height="100%">
+
             <BarChart
               data={chartData}
               margin={{
@@ -115,9 +117,14 @@ export function HourlyTradeDistribution() {
                 tickCount={5}
                 domain={[0, 'auto']}
               />
-              <ChartTooltip
-                cursor={{ fill: "transparent" }}
-                content={<ChartTooltipContent hideLabel />}
+              <Tooltip
+                cursor={{ fill: "rgba(255,255,255,0.03)" }}
+                contentStyle={{
+                  backgroundColor: "#09090b",
+                  border: "1px solid #27272a",
+                  borderRadius: "8px",
+                  fontSize: "12px",
+                }}
               />
               <Bar
                 dataKey="activity"
@@ -126,7 +133,8 @@ export function HourlyTradeDistribution() {
                 barSize={12}
               />
             </BarChart>
-          </ChartContainer>
+            </ResponsiveContainer>
+          </div>
         </CardContent>
       </Card>
   )

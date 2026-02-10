@@ -79,9 +79,10 @@ export default function Directional() {
             />
 
             <ChartTooltip
-              cursor={{ fill: "rgba(255,255,255,0.03)" }}
+              cursor={{ fill: "rgba(255,255,255,0.03)",fillOpacity:"0.05" }}
               content={
                 <ChartTooltipContent
+                  className="bg-zinc-950 border border-zinc-800 rounded-lg text-[12px] p-3"
                   formatter={(value) => [value, "Trades"]}
                 />
               }

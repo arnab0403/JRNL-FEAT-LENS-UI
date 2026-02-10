@@ -38,10 +38,10 @@ export function AssetPerformanceDistribution() {
         <div className="flex w-full justify-between  ">
           <div className="">
             <CardTitle className="text-xl font-normal">
-              Asset Performance Distribution
+              Session Performance Distribution
             </CardTitle>
             <CardDescription className="text-xs text-jrnl-text-grey">
-              Profit by Trading distribution
+              Session based trading profit
             </CardDescription>
           </div>
 
@@ -83,10 +83,11 @@ export function AssetPerformanceDistribution() {
             />
 
             <ChartTooltip
-              cursor={{ fill: "rgba(255,255,255,0.03)" }}
+              cursor={{ fill: "rgba(255,255,255,0.03)", fillOpacity:"0.05" }}
               content={
                 <ChartTooltipContent
                   formatter={(value) => [`${value}`, "Profit"]}
+                  className="bg-zinc-950 border border-zinc-800 rounded-lg text-[12px] p-3"
                 />
               }
             />

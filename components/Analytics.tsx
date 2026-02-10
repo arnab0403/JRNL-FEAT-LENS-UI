@@ -3,7 +3,7 @@ import BestAssetChart from "./BestAsset"
 import { HourlyTradeDistribution } from "./HourlyTrade"
 import { DailyPnLChart } from "./DailyPnlChart"
 import Directional from "./Directional"
-import { Holiday } from "./Holiday"
+import { Holding } from "./Holding"
 import {AssetPerformanceDonut} from "./Pie"
 import { TradeDurationChart } from "./TradeDuration"
 import TradingPerformence from "./TradingPerformence"
@@ -36,7 +36,7 @@ function Analytics({setIsOpen}: {setIsOpen: (value:boolean)=>void}){
 
                 <div className="bg-secondary  rounded-[12px] w-full flex justify-between gap-5">
                     <TradeDurationChart/>
-                    <Holiday/>
+                    <Holding/>
                 </div>
             </div>
         </div>

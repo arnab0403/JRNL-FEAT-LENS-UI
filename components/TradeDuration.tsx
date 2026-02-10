@@ -29,7 +29,7 @@ export function TradeDurationChart() {
       {/* Header */}
       <div className="flex items-center justify-between p-3 h-[73px]">
           <h3 className="text-[20px] font-normal text-text-white">
-            Trade Duration
+            Trade Duration VS Profit
           </h3>
         <span className="text-text-white">
           <MoreVertical className="h-6 w-6" />
