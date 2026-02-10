@@ -51,7 +51,6 @@ export default function Home() {
         </div>
         {tab === "reports" && <Reports setIsOpen={setIsOpen} lensMetricsData={matricsData}  />}
         {tab === "analytics" && <Analytics setIsOpen={setIsOpen} />}
-        {tab === "review" && <ChartBarInteractive />}
       </div>
     </div>
     {isOpen && <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} matricsData={matricsData} setMatricsData={setMatricsData}/>}
