@@ -7,7 +7,6 @@ import { useState } from "react";
 import { lensMetricsData } from "@/data/data";
 import Reports from "@/components/Reports";
 import Analytics from "@/components/Analytics";
-import { ChartBarInteractive } from "@/components/Test";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);

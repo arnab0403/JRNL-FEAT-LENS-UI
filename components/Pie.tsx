@@ -79,7 +79,7 @@ export function AssetPerformanceDonut() {
                   <Cell key={index} fill={entry.color} className="focus:border-none outline-none"/>
                 ))}
 
-                <Label
+                <Label className="border border-white"
                   content={({ viewBox }) => {
                     if (viewBox && "cx" in viewBox && "cy" in viewBox) {
                       return (
@@ -88,6 +88,7 @@ export function AssetPerformanceDonut() {
                           y={viewBox.cy}
                           textAnchor="middle"
                           dominantBaseline="middle"
+                          pointerEvents="none"
                         >
                           <tspan
                             x={viewBox.cx}
